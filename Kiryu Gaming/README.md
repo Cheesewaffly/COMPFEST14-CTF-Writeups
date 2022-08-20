@@ -1,4 +1,4 @@
-##Overview
+## Overview
 We're greeted with the file ```chall.png``` attached in the challenge. The image contains Kiryu (no idea who that is, to be honest) wearing a green headset in a weird purple lighting.
 
 The image is working just fine in the image viewer, so I don't think there should be anything wrong with the file structure. Because of that, my first approach is to try and open ```chall.png``` in a steganography solver. In this case, I used [stegsolve.jar](http://www.caesum.com/handbook/Stegsolve.jar) by Caesum.
