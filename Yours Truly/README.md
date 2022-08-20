@@ -29,7 +29,7 @@ In fact, it has 32 factors. A typical RSA has only two prime factors for its n, 
 the totient or phi value for a multiprime RSA can be calculated by the product of all of its factors decremented by 1. We can also use carmichael's function but its a little bit tricky to code. 
 $$\phi = (p_1-1)(p_2-1)(p_3-1)\ldots(p_n-1)$$
 Anyway, knowing the totient means we can find d.
-$$d = e^{-1}\bmod\bigl((p-1)(q-1)(r-1)(s-1)\bigr)$$
+$$d = e^{-1}\bmod\bigl((p_1-1)(p_2-1)(p_3-1)\ldots(p_n-1)\bigr)$$
 
 ## Python Implementation
 
