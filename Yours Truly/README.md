@@ -31,7 +31,7 @@ $$\phi = (p_1-1)(p_2-1)(p_3-1)\ldots(p_n-1)$$
 Anyway, knowing the totient means we can find d.
 $$d = e^{-1}\bmod\bigl((p_1-1)(p_2-1)(p_3-1)\ldots(p_n-1)\bigr)$$
 
-## Python Implementation
+## Solution
 
 ```python
 encrypted = int.from_bytes(open('message.enc', 'rb').read(), 'big')
