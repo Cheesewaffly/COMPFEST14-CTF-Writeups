@@ -89,6 +89,7 @@ The ```evalit``` function is definitely the key, since it can allow us to run co
 
 The ```sum``` function and other math functions have 2 arguments. So to run ```evalit```, we need to find other functions with only one argument. The easiest one to get is probably the ```format_error``` function. 
 
+##Solution
 Let's input random stuff and get the input query!
 
 ```
