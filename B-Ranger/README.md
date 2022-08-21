@@ -72,7 +72,7 @@ Now is the time to reconstruct!
 ```python
 for x in byte_ranges:
     png_chunk = open(f"{x}.png", "rb")
-    final_png = open(final_png_args, "ab")
+    final_png = open("part_1.png, "ab")
     final_png.write(png_chunk.read())
 final_png.close()
 ```
