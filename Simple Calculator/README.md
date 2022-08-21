@@ -108,7 +108,9 @@ Next step is to encode it to base64 and put it in the url!
 ```
 
 And voila! The hello world is there. Now what? Well, the description said there is some interesting stuff in root. So let's go there!
-Let's scan the root directory using this python script!
+Let's scan the root directory using the ```scandir()``` syntax.
+
+To make this easier, I created a python script to generate the url.
 
 ```
 import base64
