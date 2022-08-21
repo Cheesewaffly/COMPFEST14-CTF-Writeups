@@ -3,5 +3,5 @@
 ### HengkerNgangNgong's CTF Solves in COMPFEST-14 CTF Hackerclass
 Team Members:
 - Nabil Mu'afa (Fasilkom UI '22)
-- Muhammad Oka (Fasilkom UI '22)
-- Alden Luthfi A (Fasilkom UI '22)
+- Muhammad Oka a.k.a kawijayaa (Fasilkom UI '22)
+- Alden Luthfi A a.k.a Cheesewaffle(Fasilkom UI '22)
