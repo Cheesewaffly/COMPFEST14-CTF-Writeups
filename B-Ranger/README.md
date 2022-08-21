@@ -77,7 +77,8 @@ for x in byte_ranges:
 final_png.close()
 ```
 
-And voila! We found the first part of the flag.
+And we found the first part of the flag!
+
 [![part-1.png](https://i.postimg.cc/h4msp99N/part-1.png)](https://postimg.cc/5jx8tQKm)
 
 And now we need to do it to the part_2.png's!
