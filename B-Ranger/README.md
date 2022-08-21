@@ -28,8 +28,11 @@ This means that the png's are broken in chunks!
 Let's export all of them!
 And since we know the byte ranges of the png chunks from the HTTP info, let's also export the HTTP info in ```File > Export Packet Dissections > As Plain Text...```.
 
-Now we have the png chunks and the HTTP info. Let's make a game plan.
-The plan is to identify where each png chunks belong in the final png file. Let's try it with the png_1.png's first.
+Now we have the png chunks and the HTTP info, let's make a game plan.
+
+The plan is to identify where each png chunks belong in the final png file. And then we reconstruct the final png file using the png chunks that we have! 
+
+Let's try it with the png_1.png's first.
 
 First step is to rename the png chunks to their byte ranges.
 
