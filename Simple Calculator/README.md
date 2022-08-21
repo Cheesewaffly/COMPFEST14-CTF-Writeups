@@ -152,4 +152,4 @@ Output: COMPFEST14{welcome_to_the_root}
 
 And just like that, the flag is found!
 
-##### solved by kawijayaa
+##### Solved by kawijayaa
