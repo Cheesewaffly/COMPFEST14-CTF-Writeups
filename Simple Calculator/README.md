@@ -101,6 +101,7 @@ Woah, the function's name is literally there! So let's just change the fuction n
 a:2:{i:0;s:6:"evalit";i:1;s:20:"echo "Hello world!";";}
 ```
 
+And sure enough it works!
 Next step is to encode it to base 64 and put it in the url!
 
 ```
