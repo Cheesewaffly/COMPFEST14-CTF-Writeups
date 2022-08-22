@@ -11,18 +11,23 @@ God... what am I looking at here... The file structure is broken inside-out. Jus
 Upon my first inspection, I found some interesting points:
 
 • The header chunk, IHDR, is missing (or purposedly changed with random hex values?)
+
 ![image](https://user-images.githubusercontent.com/109450293/185901391-4e332914-250d-4119-b9a4-a76d499d7228.png)
 
 • The IEND chunk is not at the very end of the hex structure when it should've
+
 ![image](https://user-images.githubusercontent.com/109450293/185901526-37b94359-0dc2-47d2-8d8b-a0415c6ff24a.png)
 
 • There is an IDAT chunk with missing chunk values
+
 ![image](https://user-images.githubusercontent.com/109450293/185901749-a5e6debb-11e2-4673-a06a-84c4bc341415.png)
 
 • There is also an IDAT chunk that has less values than the specified size`
+
 ![image](https://user-images.githubusercontent.com/109450293/185901670-9d3d0b19-f10b-4496-b1e8-536008d7905f.png)
 
 As we know, a chunk consists of 4 bytes that specifies the size/length of the chunk, 4 bytes that specifies the chunk type, then the chunk values with the specified size, and lastly 4 bytes of CRC32, an error-detecting piece of code.
+
 ![image](https://user-images.githubusercontent.com/109450293/185901992-8ff9fee8-c6b1-4d90-8807-6cf170cc0313.png)
 
 
@@ -41,10 +46,12 @@ Upon the second inspection, the "deeper" inspection, I noticed some other things
 The approach is to swap back those obvious switched values first, before figuring out the correct order for the chunk values and match the CRCs. The swapping can be done by using a simple hex editor like 010 or hexedit.
 
 After the swap and saving the image, I noticed that both the IHDR chunk and IEND chunk is already fixed.
+
 ![image](https://user-images.githubusercontent.com/109450293/185902333-c23d8350-3bdb-4494-8310-4b72ae7e988d.png)
 ![image](https://user-images.githubusercontent.com/109450293/185902371-d902a826-e624-41a2-b95e-9cda167c36ad.png)
 
 We can already preview the image in an image viewer, but it appears that the image is all black. It means that the IDAT chunk values are still out of order, so the full image is still 'broken'. We need to rearrange those chunks somehow.
+
 ![image](https://user-images.githubusercontent.com/109450293/185903851-bb0549ea-81e1-42a1-a94a-ae12783679bb.png)
 
 
@@ -52,7 +59,8 @@ This can actually be done in Python scripting, but since I'm not too experienced
 
 Opening the image in the software causes errors, which states that the CRC of the current chunk is not as what it should've been.
 
-With these error messages for every IDAT chunk, I was able to find the correct order of the IDAT chunk without any bruteforcing. After rearranging the IDAT chunks correctly, the image is fixed and it shows a QR code, which when scanned, gave us the flag in plain text. Voila!
+With these error messages for every IDAT chunk, I was able to find the correct order of the IDAT chunk without any bruteforcing. After rearranging the IDAT chunks correctly, the image is fixed and it shows a QR code, which when scanned, gave us the flag in plain text. Voilà!
+
 ![image](https://user-images.githubusercontent.com/109450293/185902740-0772b00f-0783-4cc2-a004-7457d167838a.png)
 
 ##### Solved by nabilmuafa
