@@ -96,8 +96,8 @@ hexes = [0xffffffd9, 0xffffffb2, 0xffffffb9, 0xfffffff4, 0xffffffe3, 0xffffffc7,
 
 lenh = 0x2c
 
-for i in range(lenh):
-    hexes[i] = chr(((-1*(4294967295 - hexes[i] + 1)) + 0x80))
+for i in range(lenh): #every number in hexes is a negative number in c but python handles negatives differently so we need to convert them manually
+    hexes[i] = chr(((-1*(4294967295 - hexes[i] + 1)) + 0x80)) 
 
 final_array = [base64.b64decode(''.join(hexes))[i]^0x20 for i in range(len(base64.b64decode(''.join(hexes))))]
 decrypted = ''.join([chr(x) for x in final_array])
