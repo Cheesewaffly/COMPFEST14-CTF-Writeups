@@ -43,7 +43,7 @@ Upon the second inspection, the "deeper" inspection, I noticed some other things
 
 ## Solution
 
-The approach is to swap back those obvious switched values first, before figuring out the correct order for the chunk values and match the CRCs. The swapping can be done by using a simple hex editor like 010 or hexedit.
+The approach is to swap back those obvious values first, before figuring out the correct order for the chunk values and match the CRCs. The swapping can be done by using a simple hex editor like 010 or hexedit.
 
 After the swap and saving the image, I noticed that both the IHDR chunk and IEND chunk is already fixed.
 
@@ -57,7 +57,7 @@ We can already preview the image in an image viewer, but it appears that the ima
 
 This can actually be done in Python scripting, but since I'm not too experienced with Python (yet), I decided to find a way to manually rearrange the order of the IDAT chunks. After some researching, I stumbled upon a software called TweakPNG that is able to rearrange chunks.
 
-Opening the image in the software causes errors, which states that the CRC of the current chunk is not as what it should've been.
+Opening the image in the software causes errors which states that the CRC of the current chunk is not what it should've been.
 
 With these error messages for every IDAT chunk, I was able to find the correct order of the IDAT chunk without any bruteforcing. After rearranging the IDAT chunks correctly, the image is fixed and it shows a QR code, which when scanned, gave us the flag in plain text. Voilà!
 
